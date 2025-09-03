@@ -5,63 +5,255 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Lendly</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
-    h1, h2, h3 { color: #111; }
-    a { color: #1a0dab; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    p { margin-bottom: 15px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-size: 2.5em;
+      font-weight: 300;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+    
+    .content {
+      padding: 40px 30px;
+    }
+    
+    h2 {
+      color: #667eea;
+      font-size: 1.4em;
+      font-weight: 600;
+      margin: 35px 0 15px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f0f2f5;
+      position: relative;
+    }
+    
+    h2::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    h2:first-of-type {
+      margin-top: 0;
+    }
+    
+    p {
+      margin-bottom: 16px;
+      font-size: 1em;
+      color: #555;
+    }
+    
+    ul {
+      margin: 15px 0 25px 0;
+      padding-left: 0;
+    }
+    
+    li {
+      list-style: none;
+      margin-bottom: 12px;
+      padding: 12px 16px;
+      background: #f8f9ff;
+      border-left: 4px solid #667eea;
+      border-radius: 6px;
+      position: relative;
+    }
+    
+    li strong {
+      color: #667eea;
+      font-weight: 600;
+    }
+    
+    a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    
+    a:hover {
+      background: #f0f2ff;
+      text-decoration: underline;
+    }
+    
+    .contact-section {
+      background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .contact-section h2 {
+      border: none;
+      margin-bottom: 15px;
+    }
+    
+    .contact-section h2::before {
+      display: none;
+    }
+    
+    .footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    
+    .last-updated {
+      background: #e8f4fd;
+      color: #1976d2;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      border-left: 4px solid #1976d2;
+      font-weight: 500;
+    }
+    
+    .section-number {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .header {
+        padding: 30px 20px;
+      }
+      
+      .header h1 {
+        font-size: 2em;
+      }
+      
+      .content {
+        padding: 30px 20px;
+      }
+      
+      h2 {
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy for Lendly</h1>
-  <p>Effective Date: [Insert Date]</p>
-
-  <h2>1. Introduction</h2>
-  <p>Lendly (“we”, “our”, or “us”) is a peer-to-peer app that allows neighbors to rent items to each other. This Privacy Policy explains how we collect, use, and share information when you use Lendly.</p>
-
-  <h2>2. Information We Collect</h2>
-  <p>We use Firebase and AdMob, which may collect the following data:</p>
-  <ul>
-    <li><strong>Account Info:</strong> Email address and phone number used to log in.</li>
-    <li><strong>Identifiers:</strong> Device ID and user ID (if assigned).</li>
-    <li><strong>Usage Data:</strong> App launches, taps, clicks, scrolling, screen views, and interaction with ads.</li>
-    <li><strong>Advertising Data:</strong> Ads seen or clicked, ad performance metrics.</li>
-    <li><strong>Location Data:</strong> Your approximate location detected once you open the app to show nearby items.</li>
-    <li><strong>Diagnostics:</strong> Crash logs, performance data, and technical diagnostics.</li>
-  </ul>
-
-  <h2>3. How We Use Your Data</h2>
-  <p>We and our third-party partners use collected data for:</p>
-  <ul>
-    <li>Providing app functionality, including showing nearby rental items.</li>
-    <li>Displaying relevant ads via AdMob.</li>
-    <li>Analyzing app usage to improve features and user experience.</li>
-    <li>Monitoring app stability and performance.</li>
-  </ul>
-
-  <h2>4. Data Sharing</h2>
-  <p>We may share your data with:</p>
-  <ul>
-    <li>Firebase for database and analytics services.</li>
-    <li>AdMob for ad targeting and analytics.</li>
-    <li>Other service providers who help us operate or improve the app.</li>
-  </ul>
-
-  <h2>5. Location Data</h2>
-  <p>We collect location data only when you open the app. This helps show rental items near you. Location data may be linked to your device ID for analytics and ad targeting.</p>
-
-  <h2>6. User Control</h2>
-  <p>You can control certain data collection through your device settings, including limiting ad tracking, controlling location access, or resetting your advertising identifier.</p>
-
-  <h2>7. Children’s Privacy</h2>
-  <p>Lendly is not intended for children under 13, and we do not knowingly collect personal information from children.</p>
-
-  <h2>8. Changes to This Privacy Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Updates will be posted on this page with the revised effective date.</p>
-
-  <h2>9. Contact Us</h2>
-  <p>If you have questions about this Privacy Policy, please contact us at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-
-  <p>Thank you for using Lendly.</p>
+  <div class="container">
+    <div class="header">
+      <h1>Privacy Policy</h1>
+      <p>Lendly - Your Neighborhood Rental App</p>
+    </div>
+    
+    <div class="content">
+      <div class="last-updated">
+        <strong>Effective Date:</strong> December 15, 2024
+      </div>
+      
+      <h2><span class="section-number">1</span>Introduction</h2>
+      <p>Lendly ("we", "our", or "us") is a peer-to-peer app that allows neighbors to rent items to each other. This Privacy Policy explains how we collect, use, and share information when you use Lendly.</p>
+      
+      <h2><span class="section-number">2</span>Information We Collect</h2>
+      <p>We use Firebase and AdMob, which may collect the following data:</p>
+      <ul>
+        <li><strong>Account Info:</strong> Email address and phone number used to log in.</li>
+        <li><strong>Identifiers:</strong> Device ID and user ID (if assigned).</li>
+        <li><strong>Usage Data:</strong> App launches, taps, clicks, scrolling, screen views, and interaction with ads.</li>
+        <li><strong>Advertising Data:</strong> Ads seen or clicked, ad performance metrics.</li>
+        <li><strong>Location Data:</strong> Your approximate location detected once you open the app to show nearby items.</li>
+        <li><strong>Diagnostics:</strong> Crash logs, performance data, and technical diagnostics.</li>
+      </ul>
+      
+      <h2><span class="section-number">3</span>How We Use Your Data</h2>
+      <p>We and our third-party partners use collected data for:</p>
+      <ul>
+        <li>Providing app functionality, including showing nearby rental items.</li>
+        <li>Displaying relevant ads via AdMob.</li>
+        <li>Analyzing app usage to improve features and user experience.</li>
+        <li>Monitoring app stability and performance.</li>
+      </ul>
+      
+      <h2><span class="section-number">4</span>Data Sharing</h2>
+      <p>We may share your data with:</p>
+      <ul>
+        <li>Firebase for database and analytics services.</li>
+        <li>AdMob for ad targeting and analytics.</li>
+        <li>Other service providers who help us operate or improve the app.</li>
+      </ul>
+      
+      <h2><span class="section-number">5</span>Location Data</h2>
+      <p>We collect location data only when you open the app. This helps show rental items near you. Location data may be linked to your device ID for analytics and ad targeting.</p>
+      
+      <h2><span class="section-number">6</span>User Control</h2>
+      <p>You can control certain data collection through your device settings, including limiting ad tracking, controlling location access, or resetting your advertising identifier.</p>
+      
+      <h2><span class="section-number">7</span>Children's Privacy</h2>
+      <p>Lendly is not intended for children under 13, and we do not knowingly collect personal information from children.</p>
+      
+      <h2><span class="section-number">8</span>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Updates will be posted on this page with the revised effective date.</p>
+      
+      <div class="contact-section">
+        <h2><span class="section-number">9</span>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, please contact us at:</p>
+        <p><a href="mailto:support@lendly.app">support@lendly.app</a></p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Thank you for using Lendly - Making neighborhoods more connected, one rental at a time.</p>
+    </div>
+  </div>
 </body>
 </html>
